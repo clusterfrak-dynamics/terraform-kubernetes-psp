@@ -6,11 +6,13 @@ resource "kubernetes_pod_security_policy" "privileged" {
     }
   }
   spec {
-    privileged                 = true
-    allow_privilege_escalation = true
-    allowed_capabilities       = ["*"]
-    volumes                    = ["*"]
-    host_network               = true
+    privileged                         = true
+    allow_privilege_escalation         = true
+    default_allow_privilege_escalation = true
+
+    allowed_capabilities = ["*"]
+    volumes              = ["*"]
+    host_network         = true
     host_ports {
       min = 0
       max = 65535
