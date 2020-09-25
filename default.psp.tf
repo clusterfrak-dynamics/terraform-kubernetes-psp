@@ -4,9 +4,9 @@ resource "kubernetes_pod_security_policy" "default" {
   metadata {
     name = "default"
     annotations = {
-      "seccomp.security.alpha.kubernetes.io/allowedProfileNames" = "docker/default"
+      "seccomp.security.alpha.kubernetes.io/allowedProfileNames" = "docker/default,runtime/default"
       "apparmor.security.beta.kubernetes.io/allowedProfileNames" = "runtime/default"
-      "seccomp.security.alpha.kubernetes.io/defaultProfileName"  = "docker/default"
+      "seccomp.security.alpha.kubernetes.io/defaultProfileName"  = "runtime/default"
       "apparmor.security.beta.kubernetes.io/defaultProfileName"  = "runtime/default"
     }
   }
