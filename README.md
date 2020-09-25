@@ -6,6 +6,8 @@
 A terraform module to deploy a sensible set of default PSP onto a Kubernetes
 cluster.
 
+This module is based on [`therandomsecurityguy/kubernetes-security`](https://github.com/therandomsecurityguy/kubernetes-security)
+
 ## Requirements
 
 | Name | Version |
